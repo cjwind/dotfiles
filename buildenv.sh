@@ -1,23 +1,34 @@
 #!/bin/sh
+# Build shell, vim, screen environment
+# cjwind @ 2012/7/17
+
+GIT="/usr/bin/git"
+CP="/bin/cp"
+MKDIR="/bin/mkdir"
+TAR="/bin/tar"
+
+# git settings
+gituser="cjwind"
+gitmail="cwentsai@gmail.com"
 
 # 1. install git
 # 	Detect distribution and use their command to install git
 
 # 2. set git config
-git config --global user.name "cjwind"
-git config --global user.email "cwentsai@gmail.com"
+$GIT config --global user.name $gituser
+$GIT config --global user.email $gitmail
 
 # 3. git clone dotfiles
-#	There will be ssh known host problem
-cd ~
-git clone https://github.com/cjwind/dotfiles.git dotfiles
+$GIT clone https://github.com/cjwind/dotfiles.git ~/dotfiles
 
 # 4. copy dotfiles
-cp dotfiles/tcshrc ~/.tcshrc
-cp dotfiles/screenrc ~/.screenrc
-cp dotfiles/vimrc ~/.vimrc
-mkdir ~/.vim
-cd ~/.vim
-tar -zxvf ~/dotfiles/vimplugins/taglist_45.tar.gz
+$CP dotfiles/tcshrc ~/.tcshrc
+$CP dotfiles/screenrc ~/.screenrc
+$CP dotfiles/vimrc ~/.vimrc
 
 # 5. install ctags (for vim plugin)
+
+# 6. install vim plugin
+$MKDIR ~/.vim
+$TAR -C ~/.vim -zxvf ~/dotfiles/vimplugins/taglist_45.tar.gz
+
