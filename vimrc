@@ -7,8 +7,8 @@ set termencoding=utf-8
 set number				" 行號
 "let html_use_css=1
 "colorscheme koehler			
-"colorscheme elflord
-colorscheme wombat256
+colorscheme elflord
+"colorscheme wombat256
 set ai					" 自動縮排
 syntax on				" 色彩標示
 "set noeb				" turn off error bell
