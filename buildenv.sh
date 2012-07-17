@@ -13,6 +13,15 @@ gitmail="cwentsai@gmail.com"
 
 # 1. install git
 # 	Detect distribution and use their command to install git
+distr=`head -n 1 /etc/issue | awk '{print $1}'`
+if [ "$distr" = "Ubuntu" ]; then
+	apt-get -y install git
+elif [ "$distr" = "Fedora" ]; then
+	yum -y install git
+else
+	echo "Not know distribution...STOP"
+	exit 0
+fi
 
 # 2. set git config
 $GIT config --global user.name $gituser
@@ -27,6 +36,11 @@ $CP dotfiles/screenrc ~/.screenrc
 $CP dotfiles/vimrc ~/.vimrc
 
 # 5. install ctags (for vim plugin)
+if [ "$distr" = "Ubuntu" ]; then
+	apt-get -y install ctags 
+elif [ "$distr" = "Fedora" ]; then
+	yum -y install ctags
+fi
 
 # 6. install vim plugin
 $MKDIR ~/.vim
