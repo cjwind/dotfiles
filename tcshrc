@@ -156,6 +156,7 @@ alias ll 'ls -lh'
 alias la 'ls -a'
 alias s 'ssh'
 alias v 'vim'
+alias g 'grep -nr --color'
 
 #============================================================================#
 # For colourful man pages
