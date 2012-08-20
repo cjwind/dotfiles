@@ -21,7 +21,7 @@ set cursorline				" 該行的線
 set t_Co=256				" 支援 256 色
 set textwidth=0
 "set wrap
-highlight CursorLine cterm=NONE ctermbg=23
+highlight CursorLine cterm=NONE ctermbg=237
 
 " taglist setting
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
