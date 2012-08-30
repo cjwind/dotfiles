@@ -6,10 +6,13 @@ GIT="/usr/bin/git"
 CP="/bin/cp"
 MKDIR="/bin/mkdir"
 TAR="/bin/tar"
+PATCH="/usr/bin/patch"
 
 # git settings
 gituser="cjwind"
 gitmail="cwentsai@gmail.com"
+
+# TODO: need check if user is root
 
 # 1. install git
 # 	Detect distribution and use their command to install git
@@ -31,9 +34,9 @@ $GIT config --global user.email $gitmail
 $GIT clone https://github.com/cjwind/dotfiles.git ~/dotfiles
 
 # 4. copy dotfiles
-$CP dotfiles/tcshrc ~/.tcshrc
-$CP dotfiles/screenrc ~/.screenrc
-$CP dotfiles/vimrc ~/.vimrc
+$CP ~/dotfiles/tcshrc ~/.tcshrc
+$CP ~/dotfiles/screenrc ~/.screenrc
+$CP ~/dotfiles/vimrc ~/.vimrc
 
 # 5. install ctags (for vim plugin)
 if [ "$distr" = "Ubuntu" ]; then
@@ -44,5 +47,8 @@ fi
 
 # 6. install vim plugin
 $MKDIR ~/.vim
-$TAR -C ~/.vim -zxvf ~/dotfiles/vimplugins/taglist_45.tar.gz
+$TAR -C ~/.vim -zxvf ~/dotfiles/vimplugins/taglist/taglist_45.tar.gz
+
+# 6.1 patch taglist plugin 
+$PATCH -p0 ~/.vim/plugin/taglist.vim dotfiles/vimplugins/taglist/taglist.diff
 

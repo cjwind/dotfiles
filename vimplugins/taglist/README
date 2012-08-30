@@ -1,7 +1,5 @@
 1. Extract taglist files into ~/.vim/
 2. patch taglist.vim to fix error: "Taglist error: Error detected while processing function <SNR>29_Tlist_Refresh_Folds"
-	$ cp taglist.diff ~/.vim/plugin
-	$ cd ~/.vim/plugin
-	$ patch -p0 < taglist.diff
+	$ patch -p0 ~/.vim/plugin/taglist.vim taglist.diff
 
 The patch file source: http://vim.1045645.n5.nabble.com/attachment/3321902/0/taglist.diff
