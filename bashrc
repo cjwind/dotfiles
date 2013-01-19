@@ -111,3 +111,5 @@ export INPUTRC=~/.inputrc
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+# git completion
+source ~/.git-completion.bash
