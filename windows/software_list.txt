@@ -1,0 +1,18 @@
+Avira					http://www.avira.com/zh-tw/for-home
+
+Chrome					http://www.google.com
+Firefox					http://moztw.org/firefox/
+Filezilla				http://filezilla-project.org/
+
+Notepad++				http://notepad-plus-plus.org/
+Evernote				http://evernote.com/intl/zh-tw/
+Sublime					http://www.sublimetext.com/
+PDF-XChange Viewer		http://pdf-xchange-viewer.en.softonic.com/
+
+DAEMON Tools Lite		http://www.daemon-tools.cc/eng/downloads
+Dropbox					https://www.dropbox.com/
+7zip					http://www.7-zip.org/
+putty					http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+
+KMPlayer				http://www.kmpmedia.net/
+PCMAN					http://pcman.openfoundry.org/
