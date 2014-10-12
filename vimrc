@@ -13,6 +13,7 @@ set ai					" 自動縮排
 syntax on				" 色彩標示
 "set noeb				" turn off error bell
 "set vb t_vb= 				" turn off visual bell
+"set expandtab              " replace tab with spaces
 "set tabstop=4
 "set shiftwidth=4			" 縮排空白數
 "set softtabstop=4 
