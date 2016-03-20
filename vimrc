@@ -4,24 +4,26 @@ set fileencodings=ucs-bom,utf-8,big5,latin1
 set fileencoding=utf-8
 set termencoding=utf-8
 
-set number				" 行號
 "let html_use_css=1
 "colorscheme koehler			
 colorscheme elflord
 "colorscheme wombat256
+
+set number
 set ai					" 自動縮排
 syntax on				" 色彩標示
 "set noeb				" turn off error bell
 "set vb t_vb= 				" turn off visual bell
-"set expandtab              " replace tab with spaces
-"set tabstop=4
-"set shiftwidth=4			" 縮排空白數
-"set softtabstop=4 
-"set nobackup				" 不要備份檔
-set cursorline				" 該行的線
+set expandtab              " replace tab with spaces
+set tabstop=4
+set shiftwidth=4			" 縮排空白數
+set softtabstop=4 
+"set nobackup
+set cursorline
 set t_Co=256				" 支援 256 色
 set textwidth=0
 "set wrap
+set hlsearch
 highlight CursorLine cterm=NONE ctermbg=237
 
 " taglist setting
@@ -48,7 +50,5 @@ nmap <C-H> :tabprevious<cr>
 nmap <C-Y> :tabedit
 
 " 折疊
-set foldmethod=indent
-set foldlevel=5				" 顯示五層
-
-
+"set foldmethod=indent
+"set foldlevel=5				" 顯示五層
