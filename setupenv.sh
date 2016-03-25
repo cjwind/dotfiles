@@ -57,6 +57,9 @@ fi
 # 6. install vim plugin
 $MKDIR ~/.vim
 $TAR -C ~/.vim -zxvf ~/dotfiles/vimplugins/taglist/taglist_45.tar.gz
+$CP ./vimplugins/autohighlight.vim ~/.vim/plugin
+$CP ./vimplugins/auto-pairs.vim ~/.vim/plugin
+$CP ./vimplugins/a.vim ~/.vim/plugin
 
 # 6.1 patch taglist plugin 
 $PATCH -p0 ~/.vim/plugin/taglist.vim ~/dotfiles/vimplugins/taglist/taglist.diff
