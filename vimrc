@@ -44,7 +44,7 @@ nmap <C-W><C-B> :BottomExplorerWindow<cr>
 nmap <F12> :WMToggle<cr> 		" F12 為開啟/關閉 winmannager
 
 " tab 切換
-nmap <C-N> :tabnew<cr>                  " 增加檔案
+nmap <C-N> :tabnew<cr> 
 nmap <C-K> :tabnext<cr> 
 nmap <C-H> :tabprevious<cr>
 nmap <C-Y> :tabedit
