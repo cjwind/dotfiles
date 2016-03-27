@@ -46,6 +46,7 @@ $CP ~/dotfiles/vimrc ~/.vimrc
 $CP ~/dotfiles/inputrc ~/.inputrc
 $CP ~/dotfiles/git-completion.bash ~/.git-completion.bash 
 $CP ~/dotfiles/bash_aliases ~/.bash_aliases
+$CP ~/dotfiles/tmux.conf ~/.tmux.conf
 
 # 5. install ctags (for vim plugin)
 if [ "$distr" = "Ubuntu" ]; then
