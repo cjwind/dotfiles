@@ -15,8 +15,6 @@ distr=`head -n 1 /etc/issue | awk '{print $1}'`
 gituser="cjwind"
 gitmail="cwentsai@gmail.com"
 
-# TODO: need to check if software has installed
-
 # install git
 #if [ "$distr" = "Ubuntu" ]; then
 #	sudo apt-get -y install git
@@ -55,9 +53,9 @@ fi
 
 # install vim plugin
 $MKDIR ~/.vim
-$TAR -C ~/.vim -zxvf ~/dotfiles/vimplugins/taglist/taglist_45.tar.gz
+$TAR -C ~/.vim -zxvf $PWD/vimplugins/taglist/taglist_45.tar.gz
 $CP ./vimplugins/*.vim ~/.vim/plugin
 
 # patch taglist plugin 
-$PATCH -p0 ~/.vim/plugin/taglist.vim ~/dotfiles/vimplugins/taglist/taglist.diff
+$PATCH -p0 ~/.vim/plugin/taglist.vim $PWD/vimplugins/taglist/taglist.diff
 
