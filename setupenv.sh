@@ -1,5 +1,5 @@
 #!/bin/sh
-# Build shell, vim, screen environment
+# Setup shell, vim, screen environment
 # cjwind @ 2012/7/17
 
 GIT="/usr/bin/git"
@@ -48,17 +48,15 @@ $CP $PWD/tmux.conf ~/.tmux.conf
 
 # install ctags (for vim plugin)
 if [ "$distr" = "Ubuntu" ]; then
-	sudo apt-get -y install ctags 
+	sudo apt-get -y install ctags cscope 
 elif [ "$distr" = "Fedora" ]; then
-	sudo yum -y install ctags
+	sudo yum -y install ctags cscope
 fi
 
 # install vim plugin
 $MKDIR ~/.vim
 $TAR -C ~/.vim -zxvf ~/dotfiles/vimplugins/taglist/taglist_45.tar.gz
-$CP ./vimplugins/autohighlight.vim ~/.vim/plugin
-$CP ./vimplugins/auto-pairs.vim ~/.vim/plugin
-$CP ./vimplugins/a.vim ~/.vim/plugin
+$CP ./vimplugins/*.vim ~/.vim/plugin
 
 # patch taglist plugin 
 $PATCH -p0 ~/.vim/plugin/taglist.vim ~/dotfiles/vimplugins/taglist/taglist.diff
