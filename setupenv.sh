@@ -7,6 +7,7 @@ CP="/bin/cp"
 MKDIR="/bin/mkdir"
 TAR="/bin/tar"
 PATCH="/usr/bin/patch"
+LN="/bin/ln"
 
 # Detect distribution
 distr=`head -n 1 /etc/issue | awk '{print $1}'`
@@ -36,15 +37,15 @@ $GIT config --global alias.ci commit
 $GIT config --global alias.a add
 $GIT config --global core.editor vim
 
-# copy dotfiles
-$CP $PWD/tcshrc ~/.tcshrc
-$CP $PWD/screenrc ~/.screenrc
-$CP $PWD/vimrc ~/.vimrc
-$CP $PWD/inputrc ~/.inputrc
-$CP $PWD/git-completion.bash ~/.git-completion.bash 
-$CP $PWD/bashrc ~/.bashrc
-$CP $PWD/bash_aliases ~/.bash_aliases
-$CP $PWD/tmux.conf ~/.tmux.conf
+# link dotfiles
+$LN -s $PWD/tcshrc ~/.tcshrc
+$LN -s $PWD/screenrc ~/.screenrc
+$LN -s $PWD/vimrc ~/.vimrc
+$LN -s $PWD/inputrc ~/.inputrc
+$LN -s $PWD/git-completion.bash ~/.git-completion.bash 
+$LN -s $PWD/bashrc ~/.bashrc
+$LN -s $PWD/bash_aliases ~/.bash_aliases
+$LN -s $PWD/tmux.conf ~/.tmux.conf
 
 # install ctags (for vim plugin)
 if [ "$distr" = "Ubuntu" ]; then
