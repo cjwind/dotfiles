@@ -1,6 +1,5 @@
 #!/bin/sh
 # Build shell, vim, screen environment
-# cjwind @ 2012/7/17
 
 GIT="/usr/bin/git"
 CP="/bin/cp"
@@ -47,6 +46,7 @@ $LN -s $PWD/screenrc ~/.screenrc
 $LN -s $PWD/vimrc ~/.vimrc
 $LN -s $PWD/inputrc ~/.inputrc
 $LN -s $PWD/git-completion.bash ~/.git-completion.bash 
+test -e ~/.bashrc && $MV ~/.bashrc ~/.bashrc_old
 $LN -s $PWD/bashrc ~/.bashrc
 $LN -s $PWD/bash_aliases ~/.bash_aliases
 $LN -s $PWD/tmux.conf ~/.tmux.conf
@@ -60,11 +60,5 @@ fi
 
 # install vim plugin
 $MKDIR ~/.vim
-$TAR -C ~/.vim -zxvf ~/dotfiles/vimplugins/taglist/taglist_45.tar.gz
-$CP ./vimplugins/autohighlight.vim ~/.vim/plugin
-$CP ./vimplugins/auto-pairs.vim ~/.vim/plugin
-$CP ./vimplugins/a.vim ~/.vim/plugin
-
-# patch taglist plugin 
-$PATCH -p0 ~/.vim/plugin/taglist.vim ~/dotfiles/vimplugins/taglist/taglist.diff
-
+$LN -s $PWD/vimplugins/plugin ~/.vim/plugin
+$LN -s $PWD/vimplugins/doc ~/.vim/doc
