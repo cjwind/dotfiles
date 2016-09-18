@@ -37,6 +37,9 @@ $GIT config --global alias.ci commit
 $GIT config --global alias.a add
 $GIT config --global core.editor vim
 $GIT config --global color.ui auto
+$GIT config --global diff.tool vimdiff
+$GIT config --global difftool.prompt false
+$GIT config --global alias.d difftool
 
 # link dotfiles
 $LN -s $PWD/tcshrc ~/.tcshrc
