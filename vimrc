@@ -34,15 +34,6 @@ let Tlist_Exit_OnlyWindow = 1           " 如果taglist窗口是最後一個窗�
 let Tlist_Use_Right_Window = 1          " 在右側窗口中顯示taglist窗口 
 nnoremap <silent> <F8> :TlistToggle<CR>	" F8 為開啟/關閉 Tlist 的快速鍵
 
-" winManager setting
-let g:winManagerWindowLayout = "FileExplorer|TagList"
-let g:winManagerWidth = 30
-let g:defaultExplorer = 0
-let g:persistentBehaviour = 0		" 所有檔案關閉時自動離開 vim
-nmap <C-W><C-F> :FirstExplorerWindow<cr>
-nmap <C-W><C-B> :BottomExplorerWindow<cr>
-nmap <F12> :WMToggle<cr> 		" F12 為開啟/關閉 winmannager
-
 " tab 切換
 nmap <C-N> :tabnew<cr> 
 nmap <C-K> :tabnext<cr> 
