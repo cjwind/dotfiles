@@ -36,6 +36,7 @@ $GIT config --global alias.st status
 $GIT config --global alias.ci commit
 $GIT config --global alias.a add
 $GIT config --global core.editor vim
+$GIT config --global color.ui auto
 
 # link dotfiles
 $LN -s $PWD/tcshrc ~/.tcshrc
