@@ -41,15 +41,16 @@ $GIT config --global difftool.prompt false
 $GIT config --global alias.d difftool
 
 # link dotfiles
-$LN -s $PWD/tcshrc ~/.tcshrc
-$LN -s $PWD/screenrc ~/.screenrc
-$LN -s $PWD/vimrc ~/.vimrc
-$LN -s $PWD/inputrc ~/.inputrc
-$LN -s $PWD/git-completion.bash ~/.git-completion.bash 
-test -e ~/.bashrc && $MV ~/.bashrc ~/.bashrc_old
-$LN -s $PWD/bashrc ~/.bashrc
-$LN -s $PWD/bash_aliases ~/.bash_aliases
-$LN -s $PWD/tmux.conf ~/.tmux.conf
+test -L ~/.tcshrc || $LN -s $PWD/tcshrc ~/.tcshrc
+test -L ~/.screenrc || $LN -s $PWD/screenrc ~/.screenrc
+test -L ~/.vimrc || $LN -s $PWD/vimrc ~/.vimrc
+test -L ~/.inputrc || $LN -s $PWD/inputrc ~/.inputrc
+test -L ~/.git-completion.bash || $LN -s $PWD/git/git-completion.bash ~/.git-completion.bash 
+test -L ~/.git-prompt.sh || $LN -s $PWD/git/git-prompt.sh ~/.git-prompt.sh
+test -f ~/.bashrc &&  $MV ~/.bashrc ~/.bashrc_old
+test -L ~/.bashrc || $LN -s $PWD/bashrc ~/.bashrc
+test -L ~/.bash_aliases || $LN -s $PWD/bash_aliases ~/.bash_aliases
+test -L ~/.tmux.conf || $LN -s $PWD/tmux.conf ~/.tmux.conf
 
 # install ctags (for vim plugin)
 if [ "$distr" = "Ubuntu" ]; then
@@ -59,6 +60,6 @@ elif [ "$distr" = "Fedora" ]; then
 fi
 
 # install vim plugin
-$MKDIR ~/.vim
-$LN -s $PWD/vimplugins/plugin ~/.vim/plugin
-$LN -s $PWD/vimplugins/doc ~/.vim/doc
+test -d ~/.vim || $MKDIR ~/.vim
+test -L ~/.vim/plugin || $LN -s $PWD/vimplugins/plugin ~/.vim/plugin
+test -L ~/.vim/doc || $LN -s $PWD/vimplugins/doc ~/.vim/doc

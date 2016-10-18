@@ -37,7 +37,7 @@ case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
 
-source /usr/share/git-core/contrib/completion/git-prompt.sh
+source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
