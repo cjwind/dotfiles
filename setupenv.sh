@@ -17,6 +17,13 @@ gitmail="cwentsai@gmail.com"
 
 # TODO: need to check if software has installed
 
+# install screen
+if [ "$distr" = "Ubuntu" ]; then
+	sudo apt-get -y install screen 
+elif [ "$distr" = "Fedora" ]; then
+	sudo yum -y install screen
+fi
+
 # install git
 #if [ "$distr" = "Ubuntu" ]; then
 #	sudo apt-get -y install git
@@ -47,7 +54,7 @@ test -L ~/.vimrc || $LN -s $PWD/vimrc ~/.vimrc
 test -L ~/.inputrc || $LN -s $PWD/inputrc ~/.inputrc
 test -L ~/.git-completion.bash || $LN -s $PWD/git/git-completion.bash ~/.git-completion.bash 
 test -L ~/.git-prompt.sh || $LN -s $PWD/git/git-prompt.sh ~/.git-prompt.sh
-test -f ~/.bashrc &&  $MV ~/.bashrc ~/.bashrc_old
+test -f ~/.bashrc && $MV ~/.bashrc ~/.bashrc_old
 test -L ~/.bashrc || $LN -s $PWD/bashrc ~/.bashrc
 test -L ~/.bash_aliases || $LN -s $PWD/bash_aliases ~/.bash_aliases
 test -L ~/.tmux.conf || $LN -s $PWD/tmux.conf ~/.tmux.conf
