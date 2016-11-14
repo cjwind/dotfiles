@@ -7,6 +7,7 @@ MKDIR="/bin/mkdir"
 TAR="/bin/tar"
 PATCH="/usr/bin/patch"
 LN="/bin/ln"
+MV="/bin/mv"
 
 # Detect distribution
 distr=`head -n 1 /etc/issue | awk '{print $1}'`
