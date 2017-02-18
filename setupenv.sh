@@ -72,3 +72,4 @@ fi
 test -d ~/.vim || $MKDIR ~/.vim
 test -L ~/.vim/plugin || $LN -s $PWD/vimplugins/plugin ~/.vim/plugin
 test -L ~/.vim/doc || $LN -s $PWD/vimplugins/doc ~/.vim/doc
+test -L ~/.vim/autoload || $LN -s $PWD/vimplugins/autoload ~/.vim/autoload
