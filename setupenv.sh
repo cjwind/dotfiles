@@ -60,6 +60,7 @@ test -f ~/.bashrc && $MV ~/.bashrc ~/.bashrc_old
 test -L ~/.bashrc || $LN -s $PWD/bashrc ~/.bashrc
 test -L ~/.bash_aliases || $LN -s $PWD/bash_aliases ~/.bash_aliases
 test -L ~/.tmux.conf || $LN -s $PWD/tmux.conf ~/.tmux.conf
+test -L ~/.xsessionrc || $LN -s $PWD/xsessionrc ~/.xsessionrc
 
 # install ctags (for vim plugin)
 if [ "$distr" = "Ubuntu" ]; then
@@ -72,3 +73,4 @@ fi
 test -d ~/.vim || $MKDIR ~/.vim
 test -L ~/.vim/plugin || $LN -s $PWD/vimplugins/plugin ~/.vim/plugin
 test -L ~/.vim/doc || $LN -s $PWD/vimplugins/doc ~/.vim/doc
+test -L ~/.vim/autoload || $LN -s $PWD/vimplugins/autoload ~/.vim/autoload
