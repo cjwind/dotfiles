@@ -26,6 +26,9 @@ set hlsearch
 set cursorline
 highlight CursorLine cterm=NONE ctermbg=237
 
+hi DiffText   cterm=none ctermfg=Black ctermbg=Red gui=none guifg=Black guibg=Red
+hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black guibg=LightMagenta
+
 " fold
 set foldmethod=indent
 set foldlevel=10
