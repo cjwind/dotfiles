@@ -48,6 +48,8 @@ $GIT config --global diff.tool vimdiff
 $GIT config --global difftool.prompt false
 $GIT config --global alias.d difftool
 $GIT config --global alias.view "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblueby %an %Cgreen(%ar)%Creset'"
+$GIT config --global alias.sh stash
+$GIT config --global alias.sm submodule
 
 # link dotfiles
 test -L ~/.tcshrc || $LN -s $PWD/tcshrc ~/.tcshrc
