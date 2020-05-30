@@ -1,20 +1,18 @@
 {
     "window.zoomLevel": 1,
-    "editor.fontSize": 16,
     "files.trimTrailingWhitespace": true,
     "editor.minimap.enabled": false,
     "editor.fontFamily": "Noto Mono",
-    "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "[cpp]": {
         "editor.autoIndent": true
     },
     "editor.detectIndentation": false,
-    "C_Cpp.default.cStandard": "c99",
-    "C_Cpp.clang_format_fallbackStyle": "none",
     "window.titleBarStyle": "custom",
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}"
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
+    "editor.fontSize": 16,
+    "editor.formatOnSave": true
 }
