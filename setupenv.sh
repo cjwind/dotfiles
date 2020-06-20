@@ -72,10 +72,7 @@ elif [ "$distr" = "Fedora" ]; then
 fi
 
 # install vim plugin
-$MKDIR ~/.vim
-$TAR -C ~/.vim -zxvf $PWD/vimplugins/taglist/taglist_45.tar.gz
-$CP ./vimplugins/*.vim ~/.vim/plugin
-
-# patch taglist plugin 
-$PATCH -p0 ~/.vim/plugin/taglist.vim $PWD/vimplugins/taglist/taglist.diff
-
+test -d ~/.vim || $MKDIR ~/.vim
+test -L ~/.vim/plugin || $LN -s $PWD/vimplugins/plugin ~/.vim/plugin
+test -L ~/.vim/doc || $LN -s $PWD/vimplugins/doc ~/.vim/doc
+test -L ~/.vim/autoload || $LN -s $PWD/vimplugins/autoload ~/.vim/autoload
