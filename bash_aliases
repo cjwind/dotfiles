@@ -1,4 +1,3 @@
-alias g='grep -nr --exclude-dir={node_modules,vendor,.git}'
+alias g='grep -nr'
 alias v='vim -p'
 alias s='ssh'
-alias rm='rm -i'

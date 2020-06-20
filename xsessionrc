@@ -1,3 +1,0 @@
-export GTK_IM_MODULE=hime
-export XMODIFIERS=@im=hime
-export QT_IM_MODULE=hime
