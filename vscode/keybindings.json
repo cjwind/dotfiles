@@ -1,0 +1,21 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ctrl+k ctrl+u",
+        "command": "editor.unfold",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+]",
+        "command": "-editor.unfold",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+s",
+        "command": "git.stageSelectedRanges"
+    },
+    {
+        "key": "alt+d",
+        "command": "git.unstageSelectedRanges"
+    },
+]

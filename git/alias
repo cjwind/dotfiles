@@ -1,0 +1,8 @@
+alias.co=checkout
+alias.st=status
+alias.ci=commit
+alias.a=add
+alias.d=difftool
+alias.view=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblueby %an %Cgreen(%ar)%Creset'
+alias.smup=submodule update
+alias.sh=stash
