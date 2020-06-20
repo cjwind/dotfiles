@@ -1,5 +1,6 @@
 #!/bin/sh
 # Setup shell, vim, screen environment
+# cjwind @ 2012/7/17
 
 GIT="/usr/bin/git"
 CP="/bin/cp"
