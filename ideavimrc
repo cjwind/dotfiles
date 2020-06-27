@@ -49,7 +49,9 @@ imap zk <Esc>:action Back<CR>
 nmap zj :action Forward<CR>
 imap zj <Esc>:action Forward<CR>
 nmap zn :action GotoNextError<CR>
+imap zn <Esc>:action GotoNextError<CR>
 nmap zp :action GotoPreviousError<CR>
+imap zp <Esc>:action GotoPreviousError<CR>
 nmap zf :action GotoDeclaration<CR>
 imap zf <Esc>:action GotoDeclaration<CR>
 nmap zgc zz:action CheckinProject<CR>
