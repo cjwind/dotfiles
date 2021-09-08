@@ -1,4 +1,4 @@
-nmap zso :source C:\Users\cjw\.ideavimrc <CR>
+nmap zso :source ~/.ideavimrc <CR>
 :set rnu
 :set surround
 :set clipboard=unnamed
@@ -37,9 +37,13 @@ imap <F1> <Esc>mb"2y?@test<CR>"1y?/<CR>`b"1p"2p?function<CR>wzz
 nmap <F1> mb"2y?@test<CR>"1y?/<CR>`b"1p"2p?function<CR>wzz
 
 "imap <C-F1> <Esc>mb"by?function test<CR>"ay^`b"ap"bp?public<CR>J3ft2lzz<Esc>
-imap <C-F1> <Esc>mb"by?function test<CR>"ay^`b"ap"bp?public<CR>3ft2lzz<Esc>
 "nmap <C-F1> mb"by?function test<CR>"ay^`b"ap"bp?public<CR>J3ft2lzz<Esc>
-nmap <C-F1> mb"by?function test<CR>"ay^`b"ap"bp?public<CR>3ft2lzz<Esc>
+" for phpstorm
+"imap <C-F1> <Esc>mb"by?function test<CR>"ay^`b"ap"bp?public<CR>3ft2lzz<Esc>
+"nmap <C-F1> mb"by?function test<CR>"ay^`b"ap"bp?public<CR>3ft2lzz<Esc>
+" for rider
+imap <C-F1> <Esc>mb"by?\[Test\]<CR>"ay^`b"ap"bp?public<CR>2wzz<Esc>
+nmap <C-F1> mb"by?\[Test\]<CR>"ay^`b"ap"bp?public<CR>2wzz<Esc>
 
 imap <A-.> ->
 imap <A-,> =>
@@ -56,7 +60,8 @@ nmap zf :action GotoDeclaration<CR>
 imap zf <Esc>:action GotoDeclaration<CR>
 nmap zgc zz:action CheckinProject<CR>
 
-map zra zz:action ReformatCode<CR>:action Rerun<CR>
+"map zra zz:action ReformatCode<CR>:action Rerun<CR>
+map zra zz:action ReformatCode<CR>:action Run<CR>
 "map zra zz:action ReformatCode<CR>:action RunClass<CR>
 imap zra <Esc>zz:action ReformatCode<CR>:action Rerun<CR>
 "imap zra <Esc>zz:action ReformatCode<CR>:action RunClass<CR>
@@ -103,3 +108,7 @@ nmap ,g :action Generate<CR>
 nmap ,c :action NewElementSamePlace<CR>
 nmap <space> :action AceAction<CR>
 nmap <C-\> :action AceTargetAction<CR>
+
+"for Rider
+map <C-S> :action SilentCodeCleanup<CR>:action SaveAll<CR>
+imap <C-S> <Esc>:action SilentCodeCleanup<CR>:action SaveAll<CR>
